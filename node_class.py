@@ -1,5 +1,5 @@
 
-# Simple Python Node with two instance variables: value & next node 
+# Simple Python Node for Linked Lists, contains two instance variables: value & next node 
 class Node:
   def __init__(self, value, next_node=None):
     self.value = value
