@@ -73,5 +73,27 @@ class BinaryTree:
             else:
                 self.insert(value, node.rightChild)
 
+    def in_order_traversal_and_print(self, node=None):
+        """
+        Traverses the tree in this order: left --> root --> right 
+        """
+        if node is None:
+            node = self.root  # if no node is provided, start at root node
 
+        if node:  # if there is a node, ie., if node != None 
+            self.in_order_traversal_and_print(node.leftChild)  
+            print(node.data) # runs when function above returns, which is when there is no left child 
+            self.in_order_traversal_and_print(node.rightChild)
+
+
+    def pre_order_traversal(self, node=None):
+        """
+        Traverses the Tree in order: root -> left -> right 
+        """
+        if node is None:
+            node = self.root
         
+        if node:
+            print(node.data)
+            self.pre_order_traversal(node.leftChild)
+            self.pre_order_traversal(node.rightChild)
