@@ -1,21 +1,27 @@
-# The Queue in python is a data strucutre whose instance variable is a list
-# The Queue data class has three methods:
-    # 1. Add to the end of list Enqueue
-    # 2. Remove from the beginning of list Dequeue
-    # 3. Peek: returns value of node at the beginning of the queue
+""" 
+La cola (Queue) es una estructura de datos similar al array o la lista de python, pero con una serie de reglas mas rigidas.
+Reglas:
+   1. Nuevos datos agregan datos al final (enque)
+   2. Solo se pueden eliminar datos desde el inico de la cola (deque)
+   3. FIFO (first in first out) --> el primer dato en entrar al Q (cola) es el primero en irse
 
+Por ende, la "clase" para la estructura de cola tiene tres métodos:
+    # 1. Agregar al final de la lista (Enqueue)
+    # 2. Eliminar desde el inicio de la lista (Dequeue)
+    # 3. Peek: devuelve el valor del nodo al inicio de la cola
+"""
 class Queue:
    def __init__(self):
       self.queue = list()
 
-    # Insert method to add element to start of Q
+    # Metodo para insertar elemento/dato alfinal del Q / cola
    def enqueue(self,dataval):
     if dataval not in self.queue:
         self.queue.insert(0,dataval)
         return True
     return False
 
-    # Method to remove element from Q 
+    # Metodo para remover elmento de la cola. 
    def dequeue(self):
       if len(self.queue)>0:
          return self.queue.pop()
