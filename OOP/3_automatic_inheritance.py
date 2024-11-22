@@ -22,12 +22,12 @@ class Child(Father):
 
 if __name__ == "__main__":
     print("")
-    nicofather = Father('Juan', 65)     # Create Father Object named nicofather
+    nicofather = Father('Miguel', 65)     # Create Father Object named nicofather
     nicofather.display_attributes()     # Run Father class Method display_attributes()
     print("")
 
     # Create Child Object named nico    
-    nico = Child('Nico',24)   # give it inherited instance variables: name, age
+    nico = Child('Angel',24)   # give it inherited instance variables: name, age
     nico.display_attributes() # use parent method display_attributes()
     nico.child_introduction()        # uses own method  child_intro()
     print("")
